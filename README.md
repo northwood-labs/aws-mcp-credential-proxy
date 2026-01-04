@@ -6,6 +6,12 @@
 
 1. Passes those credentials down the line to the next command that only understands traditional STS credentials.
 
+## Install
+
+```bash
+go install github.com/northwood-labs/aws-mcp-credential-proxy@latest
+```
+
 ## Example
 
 ```bash
