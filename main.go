@@ -11,8 +11,6 @@ import (
 	"os"
 	"os/exec"
 	"time"
-
-	"github.com/northwood-labs/debug"
 )
 
 func main() {
@@ -58,9 +56,6 @@ func main() {
 
 		var expiration *time.Time
 
-		pp := debug.GetSpew()
-		pp.Dump(jsonData)
-
 		// Update the keys to match the environment variable names.
 		for key, value := range jsonData {
 			strValue := fmt.Sprintf("%v", value)
@@ -103,8 +98,7 @@ func main() {
 		go func() {
 			for {
 				// Wait until expiration time (with a small buffer)
-				// refreshTime := expiration.Add(-30 * time.Second) // Refresh 30 seconds before expiration
-				refreshTime := time.Now().Add(30 * time.Second)
+				refreshTime := expiration.Add(-30 * time.Second) // Refresh 30 seconds before expiration
 				WaitUntil(ctx, refreshTime)
 
 				// Check if context was cancelled

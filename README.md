@@ -35,4 +35,9 @@ Helps address the fact that [AWS MCP servers don't (yet) support AWS Container C
 
 ## Refreshes
 
+This will automatically refresh the credentials from the credential server ~30 seconds before expiration.
+
+* If the downstream command reads environment variables on-demand, they should pick up the latest changes.
+* If the downstream command reads environment variables on-load, they may not pick up until the process halts and restarts.
+
 [AWS Vault]: https://github.com/ByteNess/aws-vault#readme
