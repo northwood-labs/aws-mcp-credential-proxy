@@ -1,0 +1,10 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/felixge/httpsnoop v1.0.3 h1:s/nj+GCswXYzN5v2DpNMuMQYe+0DDwt5WVCU6CWBdXk=
+github.com/felixge/httpsnoop v1.0.3/go.mod h1:m8KPJKqk1gH5J9DgRY2ASl2lWCfGKXixSwevea8zH2U=
+github.com/gorilla/handlers v1.5.2 h1:cLTUSsNkgcwhgRqvCNmdbRWG0A3N4F+M2nWKdScwyEE=
+github.com/gorilla/handlers v1.5.2/go.mod h1:dX+xVpaxdSw+q0Qek8SSsl3dfMk3jNddUkMzo0GtH0w=
+github.com/northwood-labs/debug v0.0.0-20240514204655-f938e2fa11e9 h1:Uuy/Obqj8z6MCER8y0geETA0894Ulo0hqM71u9WtcuQ=
+github.com/northwood-labs/debug v0.0.0-20240514204655-f938e2fa11e9/go.mod h1:fu3Hu+ET7MkBAws624vkPDnehxuY/L8AJuR3nlKw64k=
+github.com/stephenafamo/kronika v0.0.0-20220912224312-79c8aa498e30 h1:9JQ+pHIUFLIQ0oOAjeUVo0S34wc6YzlSJrJ1CYea9Wk=
+github.com/stephenafamo/kronika v0.0.0-20220912224312-79c8aa498e30/go.mod h1:pDLqDSEo14Oqh73sjCf860RD7bxXYdEW9jWGvsaVaLI=
