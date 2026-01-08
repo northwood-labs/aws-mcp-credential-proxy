@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"strings"
 	"time"
 )
 
@@ -55,6 +56,7 @@ func main() {
 		}
 
 		var expiration *time.Time
+		var cmd string
 
 		// Update the keys to match the environment variable names.
 		for key, value := range jsonData {
@@ -63,10 +65,30 @@ func main() {
 			switch key {
 			case "AccessKeyId":
 				err = os.Setenv("AWS_ACCESS_KEY_ID", strValue)
+
+				cmd = "docker mcp secret set AWS_ACCESS_KEY_ID=" + strValue
+				cmds := append([]string{"--"}, strings.Split(cmd, " ")...)
+				RunCmd(cmds)
 			case "SecretAccessKey":
 				err = os.Setenv("AWS_SECRET_ACCESS_KEY", strValue)
+
+				cmd = "docker mcp secret set AWS_SECRET_ACCESS_KEY=" + strValue
+				cmds := append([]string{"--"}, strings.Split(cmd, " ")...)
+				RunCmd(cmds)
+
+				cmd = "docker mcp secret set aws-api.aws_secret_access_key=" + strValue
+				cmds = append([]string{"--"}, strings.Split(cmd, " ")...)
+				RunCmd(cmds)
 			case "Token":
 				err = os.Setenv("AWS_SESSION_TOKEN", strValue)
+
+				cmd = "docker mcp secret set AWS_SESSION_TOKEN=" + strValue
+				cmds := append([]string{"--"}, strings.Split(cmd, " ")...)
+				RunCmd(cmds)
+
+				cmd = "docker mcp secret set aws-api.aws_session_token=" + strValue
+				cmds = append([]string{"--"}, strings.Split(cmd, " ")...)
+				RunCmd(cmds)
 			case "Expiration":
 				// Parse the expiration timestamp
 				if expTime, parseErr := time.Parse(time.RFC3339, strValue); parseErr == nil {

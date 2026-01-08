@@ -15,7 +15,7 @@ go install github.com/northwood-labs/aws-mcp-credential-proxy@latest
 ## Example
 
 ```bash
-aws-vault exec --duration=15m --ecs-server --region=us-east-2 --lazy {ROLE} -- \
+aws-vault exec --duration=15m --ecs-server --region=us-east-2 --lazy {PROFILE} -- \
   aws-mcp-credential-proxy -- \
     docker mcp gateway run \
       --servers=aws-api \
