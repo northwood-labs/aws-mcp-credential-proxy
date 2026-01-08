@@ -37,7 +37,7 @@ aws-vault exec --duration=15m --ecs-server --region=us-east-2 --lazy {PROFILE} -
 ;
 ```
 
-Helps address the fact that [AWS MCP servers don't (yet) support AWS Container Credentials](https://github.com/awslabs/mcp/issues/2043).
+Helps address the fact that the [Docker MCP Toolkit version of these AWS MCP servers don't (yet) support AWS Container Credentials](https://github.com/docker/mcp-gateway/issues/317).
 
 ## Refreshes
 
